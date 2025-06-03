@@ -1,6 +1,8 @@
 // server/config/config.js
 
-require('dotenv').config()
+const path = require('path');
+// Con __dirname = ".../Calendar/server/config", path.resolve(__dirname, '../.env') → ".../Calendar/server/.env"
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
 module.exports = {
   PORT: process.env.PORT || 4000,
@@ -10,4 +12,4 @@ module.exports = {
   GCAL_REFRESH_TOKEN: process.env.GCAL_REFRESH_TOKEN,
   CALENDAR_ID: process.env.CALENDAR_ID || 'primary',
   TIMEZONE: process.env.TIMEZONE || 'America/Argentina/Cordoba'
-}
+};

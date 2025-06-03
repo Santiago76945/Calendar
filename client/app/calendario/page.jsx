@@ -17,7 +17,7 @@ export default function CalendarioPage() {
     setCargando(true)
     setError(null)
 
-    fetch('/api/eventos')
+    fetch('http://localhost:4000/api/eventos')
       .then(res => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`)
@@ -47,14 +47,13 @@ export default function CalendarioPage() {
     setEventos(prev => prev.filter(e => e.id !== id))
   }
 
-  // Al hacer clic fuera del modal, no lo cerramos automáticamente
-  // Puedes agregar lógica si querés cerrar al clic fuera.
-
   return (
     <div className="flex-col p-md">
       <header className="flex justify-between items-center m-b-md">
         <h2 className="title">Agenda de Eventos</h2>
-         <a href="/" className="btn btn-secondary">← Volver al Menú</a>
+        <a href="/" className="btn btn-secondary">
+          ← Volver al Menú
+        </a>
         <button
           className="btn btn-primary"
           onClick={() => {
@@ -78,7 +77,7 @@ export default function CalendarioPage() {
               setMostrarForm(true)
             }}
             onEliminar={(id) => {
-              fetch(`/api/eventos/${id}`, { method: 'DELETE' })
+              fetch(`http://localhost:4000/api/eventos/${id}`, { method: 'DELETE' })
                 .then(res => {
                   if (res.ok) handleEliminarLocal(id)
                   else console.error('No se pudo eliminar')
