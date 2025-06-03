@@ -1,0 +1,16 @@
+/* Estilo para alinear y separar los botones del header de import-export */
+.header-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.header-buttons .left-buttons,
+.header-buttons .right-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

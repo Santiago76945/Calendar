@@ -1,0 +1,14 @@
+/* -------------------------------------------------------------------
+   Contenedor de eventos con altura máxima y scroll vertical
+   ------------------------------------------------------------------- */
+.events-container {
+  /* Altura máxima: resta un espacio para el header y padding */
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+}
+
+/* Opcional: pequeño padding interno */
+.events-container .card {
+  margin-bottom: var(--spacing-sm);
+}
+
