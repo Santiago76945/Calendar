@@ -7,7 +7,7 @@
     /* Fondos y superficies */
     /* --color-bg: #ffffff; */
     --color-bg: #ffffff;
-    --color-surface: linear-gradient(to bottom right, #fdff6d, #5fcd7a);
+    --color-surface: linear-gradient(to bottom right, #cad2ff, #ffffff);
 
     /* Colores principales */
     --color-primary: #000000;
@@ -668,3 +668,11 @@ a:hover {
     text-align: center;
 }
 
+h1,
+h4 {
+  text-align: center;
+}
+
+h4 {
+  margin-top: 1.5rem; /* Ajustá el valor según necesites */
+}
